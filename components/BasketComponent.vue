@@ -23,6 +23,7 @@
     justify-content: right;
     margin-top: 64px;
     margin-right: 82px;
+    margin-bottom: 25px;
 
     .basket__logo-style {
       margin-right: 10px;
