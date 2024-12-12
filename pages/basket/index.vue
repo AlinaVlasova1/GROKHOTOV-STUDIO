@@ -1,17 +1,36 @@
-<script setup lang="ts">
+<script lang="ts">
 
 import BasketComponent from "~/components/BasketComponent.vue";
+import RouteComponent from "~/components/RouteComponent.vue";
+import {useProductsStore} from "~/store/products-store";
+export default defineComponent({
+  components: {
+    BasketComponent,
+    RouteComponent
+  },
+  setup() {
+    const productsStore = useProductsStore();
+    return {
+      productsStore
+    }
+  }
+})
+
 </script>
 
 <template>
   <BasketComponent></BasketComponent>
   <RouteComponent></RouteComponent>
   <div class="main-block">
-    <div class="main-block__left-block-style">
-      <h1 class="main-block__title-style">Ваша корзина</h1>
-      <span class="main-block__count-style">4 товара</span>
-      <button class="main-block__button-clear-style">Очистить корзину</button>
-      <div class="main-block__cards-products"></div>
+    <div class="main-block__left-block">
+      <div class="main-block__left-block-upper-style">
+        <h1 class="main-block__title-style">Ваша корзина</h1>
+        <span class="main-block__count-style">4 товара</span>
+        <button class="main-block__button-clear-style">Очистить корзину</button>
+      </div>
+      <div class="main-block__cards-products">
+          <ProductInBasketCard class="productInBasketCard-style" v-for="(product) in productsStore.products" :key="product.id" :product="product" />
+      </div>
     </div>
     <div class="main-block__right-block">
 
@@ -27,11 +46,16 @@ import BasketComponent from "~/components/BasketComponent.vue";
     padding-right: 80px;
   }
 
-  .main-block__left-block-style {
+  .main-block__left-block {
     max-width: 800px;
+    width: 100%;
+  }
+
+  .main-block__left-block-upper-style {
     width: 100%;
     display: flex;
     align-items: baseline;
+    padding-bottom: 50px;
   }
 
   .main-block__title-style {
@@ -50,7 +74,6 @@ import BasketComponent from "~/components/BasketComponent.vue";
     font-size: 18px;
     line-height: 26px;
     color: #797B86;
-
   }
 
 
@@ -65,6 +88,10 @@ import BasketComponent from "~/components/BasketComponent.vue";
     text-decoration-line: underline;
     margin-left: auto;
     margin-right: 0;
+  }
+
+  .productInBasketCard-style {
+    margin-bottom: 25px;
   }
 
 </style>

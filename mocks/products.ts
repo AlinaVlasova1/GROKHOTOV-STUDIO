@@ -3,65 +3,86 @@ import type {IProduct} from "~/models/product-models";
 export const products: IProduct[] = [
     {
         id: 1,
-        name: 'BXC',
-        description: 'Вытяжное устройство для механической системы вентиляции',
+        short_name: 'BXC',
+        name: 'Вытяжное устройство BXC',
+        full_name: 'Вытяжное устройство для механической системы вентиляции',
+        description: '12-72/168 м3/ч / гидрорегулируемый расход / от датчика присутствия',
         price_ru: [6848, 56584],
         price_eur: [77.60, 643.86],
         article_number: 'Артикул: G2H1065',
-        img: 'public/img/BXC.png'
+        img: '/_nuxt/public/img/BXC.png',
+        price: 12644
     },
     {
         id: 2,
-        name: 'G2H',
-        description: 'Многофункциональное вытяжное устройство для естественной и гибридной вентиляции',
+        short_name: 'G2H',
+        name: 'Вытяжное устройство G2H',
+        full_name: 'Многофункциональное вытяжное устройство для естественной и гибридной вентиляции',
+        description: '12-72/168 м3/ч / гидрорегулируемый расход / от датчика присутствия',
         price_ru: [6848, 56584],
         price_eur: [77.60, 643.86],
         article_number: 'Артикул: G2H1065',
-        img: 'public/img/G2H.png'
+        img: '/_nuxt/public/img/G2H.png',
+        price: 25288
     },
     {
         id: 3,
-        name: 'GHN',
-        description: 'Вытяжное устройство с датчиком присутствия',
+        short_name: 'GHN',
+        name: 'Вытяжное устройство GHN',
+        full_name: 'Вытяжное устройство с датчиком присутствия',
+        description: '12-72/168 м3/ч / гидрорегулируемый расход / от датчика присутствия',
         price_ru: [6848, 56584],
         price_eur: [77.60, 643.86],
         article_number: 'Артикул: G2H1065',
-        img: 'public/img/GHN.png'
+        img: '/_nuxt/public/img/GHN.png',
+        price: 12644
     },
     {
         id: 4,
-        name: 'TDA',
-        description: 'Вытяжное устройство с датчиком присутствия',
+        short_name: 'TDA',
+        name: 'Вытяжное устройство TDA',
+        full_name: 'Вытяжное устройство с датчиком присутствия',
+        description: '12-72/168 м3/ч / гидрорегулируемый расход / от датчика присутствия',
         price_ru: [6848, 56584],
         price_eur: [77.60, 643.86],
         article_number: 'Артикул: G2H1065',
-        img: 'public/img/TDA.png'
+        img: '/_nuxt/public/img/TDA.png',
+        price: 25288
     },
     {
         id: 5,
-        name: 'TDA',
-        description: 'Вытяжное устройство с датчиком присутствия',
+        short_name: 'TDA',
+        name: 'Вытяжное устройство TDA',
+        full_name: 'Вытяжное устройство с датчиком присутствия',
+        description: '12-72/168 м3/ч / гидрорегулируемый расход / от датчика присутствия',
         price_ru: [6848, 56584],
         price_eur: [77.60, 643.86],
         article_number: 'Артикул: G2H1065',
-        img: 'public/img/TDA.png'
+        img: '/_nuxt/public/img/TDA.png',
+        price: 12644
     },
     {
         id: 6,
-        name: 'TDA',
-        description: 'Вытяжное устройство с датчиком присутствия',
+        short_name: 'TDA',
+        name: 'Вытяжное устройство TDA',
+        full_name: 'Вытяжное устройство с датчиком присутствия',
+        description: '12-72/168 м3/ч / гидрорегулируемый расход / от датчика присутствия',
         price_ru: [6848, 56584],
         price_eur: [77.60, 643.86],
         article_number: 'Артикул: G2H1065',
-        img: 'public/img/TDA.png'
+        img: '/_nuxt/public/img/TDA.png',
+        price: 25288
     },
     {
         id: 7,
-        name: 'TDA',
-        description: 'Вытяжное устройство с датчиком присутствия',
+        short_name: 'TDA',
+        name: 'Вытяжное устройство TDA',
+        full_name: 'Вытяжное устройство с датчиком присутствия',
+        description: '12-72/168 м3/ч / гидрорегулируемый расход / от датчика присутствия',
         price_ru: [6848, 56584],
         price_eur: [77.60, 643.86],
         article_number: 'Артикул: G2H1065',
-        img: 'public/img/TDA.png'
+        img: '/_nuxt/public/img/TDA.png',
+        price: 12644
     }
 ]
