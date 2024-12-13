@@ -1,5 +1,15 @@
-<script setup lang="ts">
+<script lang="ts">
+import {useProductsStore} from "~/store/products-store";
 
+export default defineComponent({
+  name: "BasketComponent",
+  setup() {
+    const productsStore = useProductsStore();
+    return {
+      productsStore
+    }
+  }
+})
 </script>
 
 <template>
@@ -8,8 +18,8 @@
       <img class="basket__logo-style" src="public/icon/ant-design_shopping-cart-outlined.svg" alt="shopping-cart">
       <div class="basket__description">
         <span class="basket__title-style">Ваша корзина</span>
-        <span class="basket__count-style">3 товара</span>
-        <span class="basket__cost-style">50 576 ₽</span>
+        <span class="basket__count-style">{{productsStore.totalCount}} товара</span>
+        <span class="basket__cost-style">{{productsStore.totalCost}} ₽</span>
       </div>
     </div>
   </div>

@@ -25,7 +25,7 @@ export default defineComponent({
     <div class="main-block__left-block">
       <div class="main-block__left-block-upper-style">
         <h1 class="main-block__title-style">Ваша корзина</h1>
-        <span class="main-block__count-style">4 товара</span>
+        <span class="main-block__count-style">{{productsStore.totalCount}} товара</span>
         <button class="main-block__button-clear-style">Очистить корзину</button>
       </div>
       <div class="main-block__cards-products">

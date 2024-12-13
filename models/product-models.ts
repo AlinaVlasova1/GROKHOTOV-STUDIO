@@ -9,4 +9,5 @@ export interface IProduct {
     article_number: string;
     description: string;
     price_eur: [number,number];
+    count: number;
 }

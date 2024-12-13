@@ -11,7 +11,8 @@ export const products: IProduct[] = [
         price_eur: [77.60, 643.86],
         article_number: 'Артикул: G2H1065',
         img: '/_nuxt/public/img/BXC.png',
-        price: 12644
+        price: 12644,
+        count: 1
     },
     {
         id: 2,
@@ -23,7 +24,8 @@ export const products: IProduct[] = [
         price_eur: [77.60, 643.86],
         article_number: 'Артикул: G2H1065',
         img: '/_nuxt/public/img/G2H.png',
-        price: 25288
+        price: 12644,
+        count: 2
     },
     {
         id: 3,
@@ -35,7 +37,8 @@ export const products: IProduct[] = [
         price_eur: [77.60, 643.86],
         article_number: 'Артикул: G2H1065',
         img: '/_nuxt/public/img/GHN.png',
-        price: 12644
+        price: 12644,
+        count: 1
     },
     {
         id: 4,
@@ -47,7 +50,8 @@ export const products: IProduct[] = [
         price_eur: [77.60, 643.86],
         article_number: 'Артикул: G2H1065',
         img: '/_nuxt/public/img/TDA.png',
-        price: 25288
+        price: 12644,
+        count: 2
     },
     {
         id: 5,
@@ -59,7 +63,8 @@ export const products: IProduct[] = [
         price_eur: [77.60, 643.86],
         article_number: 'Артикул: G2H1065',
         img: '/_nuxt/public/img/TDA.png',
-        price: 12644
+        price: 12644,
+        count: 1
     },
     {
         id: 6,
@@ -71,7 +76,8 @@ export const products: IProduct[] = [
         price_eur: [77.60, 643.86],
         article_number: 'Артикул: G2H1065',
         img: '/_nuxt/public/img/TDA.png',
-        price: 25288
+        price: 12644,
+        count: 2
     },
     {
         id: 7,
@@ -83,6 +89,7 @@ export const products: IProduct[] = [
         price_eur: [77.60, 643.86],
         article_number: 'Артикул: G2H1065',
         img: '/_nuxt/public/img/TDA.png',
-        price: 12644
+        price: 12644,
+        count: 1
     }
 ]

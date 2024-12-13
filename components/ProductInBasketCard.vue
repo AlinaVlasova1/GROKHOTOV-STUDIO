@@ -1,7 +1,15 @@
 <script lang="ts">
+import {useProductsStore} from "~/store/products-store";
+
 export default defineComponent({
   name: "ProductInBasketCard",
   props: ['product'],
+  setup() {
+    const productsStore = useProductsStore();
+    return {
+      productsStore
+    }
+  }
 })
 </script>
 
@@ -15,18 +23,18 @@ export default defineComponent({
     </div>
     <div class="card__info-count-style">
       <div class="card__buttons-change-count-style">
-        <button class="card__button-left-style card__button">
+        <button class="card__button-left-style card__button" @click="productsStore.decreaseCountProduct(product.id)">
           <img class="card__img-minus" src="public/icon/minus.svg" alt="plus">
         </button>
-        <span class="card__button-text-style">1</span>
-        <button class="card__button-right-style card__button">
+        <span class="card__button-text-style">{{product.count}}</span>
+        <button class="card__button-right-style card__button" @click="productsStore.increaseCountProduct(product.id)">
           <img class="card__img-plus" src="public/icon/plus.svg" alt="plus">
         </button>
       </div>
-      <span v-if="true" class="card__text-price">{{product.price}} &#8381;/шт.</span>
+      <span v-if="product.count > 1" class="card__text-price">{{product.price}} &#8381;/шт.</span>
     </div>
-    <span class="card__price-style">{{product.price}} &#8381;</span>
-    <button class="card__button-delete-style">
+    <span class="card__price-style">{{productsStore.calcCostProduct(product.id)}} &#8381;</span>
+    <button class="card__button-delete-style" @click="productsStore.deleteProductById(product.id)">
       <img class="card__icon-cross" src="public/icon/cross.svg" alt="cross">
     </button>
   </div>
@@ -144,7 +152,7 @@ export default defineComponent({
     border: none;
     margin-right: 0;
     margin-left: auto;
-    margin-top: -10px;
+    margin-top: -80px;
   }
 
   .card__icon-cross {
