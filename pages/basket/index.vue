@@ -73,6 +73,9 @@ export default defineComponent({
       </div>
     </div>
   </div>
+  <div class="slider-block-style">
+    <SliderProducts></SliderProducts>
+  </div>
 </template>
 
 <style scoped>
@@ -279,6 +282,11 @@ export default defineComponent({
     font-size: 18px;
     line-height: 26px;
     border-radius: 4px;
+  }
+
+  .slider-block-style {
+    padding-right: 80px;
+    padding-left: 80px;
   }
 
 </style>
