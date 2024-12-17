@@ -20,6 +20,18 @@ export default defineComponent({
     transformValueInstallation() {
       return this.neededInstallationObj.isNeededInstallation ? "Да" : "Нет"
     }
+  },
+  methods: {
+    async sendOrder() {
+      await $fetch('/api/order', {
+        method: 'post',
+        body: {
+          products: this.productsStore.products,
+          isNeededInstallation: this.neededInstallationObj.isNeededInstallation,
+          totalCost: this.productsStore.totalCost,
+          totalCount: this.productsStore.totalCount},
+      })
+    }
   }
 })
 
@@ -68,7 +80,7 @@ export default defineComponent({
           <span class="main-block__total-name-property">Стоимость товаров</span>
           <span  class="main-block__total-value-property">{{productsStore.totalCost}} &#8381;</span>
         </div>
-        <button class="main-block__button-placing-an-order">Оформить заказ</button>
+        <button class="main-block__button-placing-an-order" @click="sendOrder">Оформить заказ</button>
         <button class="main-block__button-buy-click">Купить в 1 клик</button>
       </div>
     </div>
